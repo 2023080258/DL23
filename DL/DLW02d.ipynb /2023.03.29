@@ -1,0 +1,998 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/2023080258/DL23/blob/main/DL/DLW02d.ipynb%20/2023.03.29\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "---\n",
+        "# 📗 Topic [2]: Coding basic #2\n",
+        "---\n",
+        "Keywords:\n",
+        "\n",
+        "+ variables\n",
+        "+ **operators**\n",
+        "+ **data types: list and dictionary**"
+      ],
+      "metadata": {
+        "id": "k4A5_MYHpcNQ"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Your github IDs [here](https://docs.google.com/spreadsheets/d/17SX51lCqOdtvC7cAGoX5tP9fKwVdGY5sRzMg2pXh9uk/edit#gid=0) - revised 0327"
+      ],
+      "metadata": {
+        "id": "mUVgzk50XMkt"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "## [1] Variables"
+      ],
+      "metadata": {
+        "id": "93gQaEo1RX63"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "+ **A variable** is a named storage location that holds a value.\n",
+        "+ Variables can be used **to store values** such as numbers, strings, lists, or other data types. \n",
+        "+ The value of a variable can change throughout the execution of a program. \n",
+        "+ To declare a variable in Python, you need to assign a value to it using the **equal (=) sign.**"
+      ],
+      "metadata": {
+        "id": "jJT4hD1teuJr"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "x = 10\n",
+        "y = \"Hello, class!\"\n",
+        "z = [1, 2, 3]"
+      ],
+      "metadata": {
+        "id": "Xes87bY2X45M"
+      },
+      "execution_count": 6,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "↗️ In the above example, 'x' is assigned the value of 10, 'y' is assigned the value of \"Hello, World!\", and 'z' is assigned the value of [1, 2, 3]."
+      ],
+      "metadata": {
+        "id": "ulw6QsP5ZiKp"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# We can assign a link or a function\n",
+        "import pandas as pd\n",
+        "url = \"https://github.com/MK316/Spring2023/raw/main/data/att_sample.csv\"\n",
+        "data = pd.read_csv(url)\n",
+        "data"
+      ],
+      "metadata": {
+        "id": "_7bvpJt2aQmg",
+        "outputId": "9705ffc1-3466-42f1-b6a0-bc577a2d04f8",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 488
+        }
+      },
+      "execution_count": 7,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "      Names\n",
+              "0      Mary\n",
+              "1      John\n",
+              "2       Tim\n",
+              "3       Bob\n",
+              "4     Sarah\n",
+              "5      Kate\n",
+              "6     Marie\n",
+              "7   Johnson\n",
+              "8      Mike\n",
+              "9     Harry\n",
+              "10      Jin\n",
+              "11      Sam\n",
+              "12     Paul\n",
+              "13  Natalie"
+            ],
+            "text/html": [
+              "\n",
+              "  <div id=\"df-dc7e0603-70a0-4f3f-999a-bb1a8295cd13\">\n",
+              "    <div class=\"colab-df-container\">\n",
+              "      <div>\n",
+              "<style scoped>\n",
+              "    .dataframe tbody tr th:only-of-type {\n",
+              "        vertical-align: middle;\n",
+              "    }\n",
+              "\n",
+              "    .dataframe tbody tr th {\n",
+              "        vertical-align: top;\n",
+              "    }\n",
+              "\n",
+              "    .dataframe thead th {\n",
+              "        text-align: right;\n",
+              "    }\n",
+              "</style>\n",
+              "<table border=\"1\" class=\"dataframe\">\n",
+              "  <thead>\n",
+              "    <tr style=\"text-align: right;\">\n",
+              "      <th></th>\n",
+              "      <th>Names</th>\n",
+              "    </tr>\n",
+              "  </thead>\n",
+              "  <tbody>\n",
+              "    <tr>\n",
+              "      <th>0</th>\n",
+              "      <td>Mary</td>\n",
+              "    </tr>\n",
+              "    <tr>\n",
+              "      <th>1</th>\n",
+              "      <td>John</td>\n",
+              "    </tr>\n",
+              "    <tr>\n",
+              "      <th>2</th>\n",
+              "      <td>Tim</td>\n",
+              "    </tr>\n",
+              "    <tr>\n",
+              "      <th>3</th>\n",
+              "      <td>Bob</td>\n",
+              "    </tr>\n",
+              "    <tr>\n",
+              "      <th>4</th>\n",
+              "      <td>Sarah</td>\n",
+              "    </tr>\n",
+              "    <tr>\n",
+              "      <th>5</th>\n",
+              "      <td>Kate</td>\n",
+              "    </tr>\n",
+              "    <tr>\n",
+              "      <th>6</th>\n",
+              "      <td>Marie</td>\n",
+              "    </tr>\n",
+              "    <tr>\n",
+              "      <th>7</th>\n",
+              "      <td>Johnson</td>\n",
+              "    </tr>\n",
+              "    <tr>\n",
+              "      <th>8</th>\n",
+              "      <td>Mike</td>\n",
+              "    </tr>\n",
+              "    <tr>\n",
+              "      <th>9</th>\n",
+              "      <td>Harry</td>\n",
+              "    </tr>\n",
+              "    <tr>\n",
+              "      <th>10</th>\n",
+              "      <td>Jin</td>\n",
+              "    </tr>\n",
+              "    <tr>\n",
+              "      <th>11</th>\n",
+              "      <td>Sam</td>\n",
+              "    </tr>\n",
+              "    <tr>\n",
+              "      <th>12</th>\n",
+              "      <td>Paul</td>\n",
+              "    </tr>\n",
+              "    <tr>\n",
+              "      <th>13</th>\n",
+              "      <td>Natalie</td>\n",
+              "    </tr>\n",
+              "  </tbody>\n",
+              "</table>\n",
+              "</div>\n",
+              "      <button class=\"colab-df-convert\" onclick=\"convertToInteractive('df-dc7e0603-70a0-4f3f-999a-bb1a8295cd13')\"\n",
+              "              title=\"Convert this dataframe to an interactive table.\"\n",
+              "              style=\"display:none;\">\n",
+              "        \n",
+              "  <svg xmlns=\"http://www.w3.org/2000/svg\" height=\"24px\"viewBox=\"0 0 24 24\"\n",
+              "       width=\"24px\">\n",
+              "    <path d=\"M0 0h24v24H0V0z\" fill=\"none\"/>\n",
+              "    <path d=\"M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z\"/><path d=\"M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z\"/>\n",
+              "  </svg>\n",
+              "      </button>\n",
+              "      \n",
+              "  <style>\n",
+              "    .colab-df-container {\n",
+              "      display:flex;\n",
+              "      flex-wrap:wrap;\n",
+              "      gap: 12px;\n",
+              "    }\n",
+              "\n",
+              "    .colab-df-convert {\n",
+              "      background-color: #E8F0FE;\n",
+              "      border: none;\n",
+              "      border-radius: 50%;\n",
+              "      cursor: pointer;\n",
+              "      display: none;\n",
+              "      fill: #1967D2;\n",
+              "      height: 32px;\n",
+              "      padding: 0 0 0 0;\n",
+              "      width: 32px;\n",
+              "    }\n",
+              "\n",
+              "    .colab-df-convert:hover {\n",
+              "      background-color: #E2EBFA;\n",
+              "      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);\n",
+              "      fill: #174EA6;\n",
+              "    }\n",
+              "\n",
+              "    [theme=dark] .colab-df-convert {\n",
+              "      background-color: #3B4455;\n",
+              "      fill: #D2E3FC;\n",
+              "    }\n",
+              "\n",
+              "    [theme=dark] .colab-df-convert:hover {\n",
+              "      background-color: #434B5C;\n",
+              "      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);\n",
+              "      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));\n",
+              "      fill: #FFFFFF;\n",
+              "    }\n",
+              "  </style>\n",
+              "\n",
+              "      <script>\n",
+              "        const buttonEl =\n",
+              "          document.querySelector('#df-dc7e0603-70a0-4f3f-999a-bb1a8295cd13 button.colab-df-convert');\n",
+              "        buttonEl.style.display =\n",
+              "          google.colab.kernel.accessAllowed ? 'block' : 'none';\n",
+              "\n",
+              "        async function convertToInteractive(key) {\n",
+              "          const element = document.querySelector('#df-dc7e0603-70a0-4f3f-999a-bb1a8295cd13');\n",
+              "          const dataTable =\n",
+              "            await google.colab.kernel.invokeFunction('convertToInteractive',\n",
+              "                                                     [key], {});\n",
+              "          if (!dataTable) return;\n",
+              "\n",
+              "          const docLinkHtml = 'Like what you see? Visit the ' +\n",
+              "            '<a target=\"_blank\" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'\n",
+              "            + ' to learn more about interactive tables.';\n",
+              "          element.innerHTML = '';\n",
+              "          dataTable['output_type'] = 'display_data';\n",
+              "          await google.colab.output.renderOutput(dataTable, element);\n",
+              "          const docLink = document.createElement('div');\n",
+              "          docLink.innerHTML = docLinkHtml;\n",
+              "          element.appendChild(docLink);\n",
+              "        }\n",
+              "      </script>\n",
+              "    </div>\n",
+              "  </div>\n",
+              "  "
+            ]
+          },
+          "metadata": {},
+          "execution_count": 7
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "## Commenting '#' << 인간이 알아듣는 언어 #으로 시작하면 인간만 //\"텍스트\"\n",
+        "\n",
+        "- In Python, the # symbol is used to indicate comment lines. A comment is a line of text in a code that is ignored by the Python interpreter and is used to provide explanations or notes for the reader of the code.\n",
+        "\n",
+        "## Uncommenting shortcut: \n",
+        "* \"Ctrl + /\" (Place the cursor on the code line and press the Control + / key.)"
+      ],
+      "metadata": {
+        "id": "xZv9R8I8ZWvt"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# This is a comment in Python\n",
+        "x = 10 # this is also a comment"
+      ],
+      "metadata": {
+        "id": "7UJmbmmTaFx9"
+      },
+      "execution_count": 1,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "x1 = x * 10\n",
+        "x2 = x + 5\n",
+        "# ->print 하면 값을 보여줌\n",
+        "\n",
+        "print(x1) # Print the value of x1\n",
+        "# print(x1, x2) # Print the values of x1 and x2"
+      ],
+      "metadata": {
+        "id": "Ivc72tB0X_TS",
+        "outputId": "f0fa97c2-6d4c-43e0-c1d1-bf811662aa30",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "execution_count": 5,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "100\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "print(y)\n",
+        "y1 = y + \"Welcome to the class.\"\n",
+        "z1 = z + [3,2,1]\n",
+        " \n",
+        "print(y1, z1)"
+      ],
+      "metadata": {
+        "id": "cxePqv-52RU0",
+        "outputId": "6581a255-7891-42b9-a45b-2d01550db2ff",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "execution_count": 8,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Hello, class!\n",
+            "Hello, class!Welcome to the class. [1, 2, 3, 3, 2, 1]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Input types:\n",
+        "\n",
+        "* integer: e.g., -3, 1, 0, 234, etc. #정수\n",
+        "* float: e.g., -3.0, 1.2, 0, 3.141592653589793238, etc. #소수 floating number\n",
+        "* string: (characters) \"1\", '0', \"3.29\", \"Mary\", \"euphoria\", 'My name is Jane.'#문자 \"안에 들어가면 문자\"\n",
+        "\n",
+        "_Note:_ double or single quotation marks denote **string** data. (Open and close should match.)"
+      ],
+      "metadata": {
+        "id": "4zDbyBHbeQsq"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# DIY\n",
+        "x = 1\n",
+        "y = 3\n",
+        "z = x + y\n",
+        "print(z)\n",
+        "\n",
+        "x1 = \"1\"\n",
+        "y1 = \"3\"\n",
+        "z1 = x1 + y1\n",
+        "print(z1)  #문자임"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "yzZuC29QfP3T",
+        "outputId": "ea10a0a0-64e3-4e57-aeb5-fdeff4dc83da"
+      },
+      "execution_count": 9,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "4\n",
+            "13\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "type(z) #정수수"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "qwDb8cf5fkKi",
+        "outputId": "12c104bd-9c2a-4ec5-ade8-d0a8832c7639"
+      },
+      "execution_count": 10,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "int"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 10
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "type(z1) #문자"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "L7sxvSaOfsOt",
+        "outputId": "3e923db5-852c-4106-acf3-93b453343aa6"
+      },
+      "execution_count": 11,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "str"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 11
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "print(type(z), type(z1))"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "bbFaL_GWfwMH",
+        "outputId": "8b1618af-1586-4ffe-823e-5fc4b060816f"
+      },
+      "execution_count": 12,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "<class 'int'> <class 'str'>\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "## [2] Operators\n",
+        "\n",
+        "* Symbols that perform operations on values and variables. \n",
+        "* They are used to perform arithmetic and logical operations, and they can also be used to manipulate and compare values. "
+      ],
+      "metadata": {
+        "id": "5JgA2T2dRft5"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "1. Arithmetic Operators: +, -, *, /, %, ** (for exponentiation)\n",
+        "2. semicolon ';' - separate multiple statements (code lines) on a single line."
+      ],
+      "metadata": {
+        "id": "NJBgu_O4bczL"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "x = 2; y = 5\n",
+        "\n",
+        "a1 = x + y\n",
+        "a2 = x - y\n",
+        "a3 = x * y\n",
+        "a4 = x / y\n",
+        "a5 = x ** y"
+      ],
+      "metadata": {
+        "id": "dXT3pIzobUHU"
+      },
+      "execution_count": 13,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "print(a1, a2, a3, a4, a5)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "_m3JBsOKd6Uv",
+        "outputId": "977c1f5a-2723-46d7-cac0-7ef0c76bb2c6"
+      },
+      "execution_count": 14,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "7 -3 10 0.4 32\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "print(\"The value of a1:\", a1)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "5kq7I3nMd0Xi",
+        "outputId": "68d59bf4-d6dc-4c35-d220-276c322b8873"
+      },
+      "execution_count": 15,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "The value of a1: 7\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "# 🌱 Define a function\n",
+        "\n",
+        "Demo 🔢 Calculator"
+      ],
+      "metadata": {
+        "id": "Cx1NyWUAybc8"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# This function adds two numbers\n",
+        "def add(x, y):\n",
+        "    return x + y\n",
+        "\n",
+        "# This function subtracts two numbers\n",
+        "def subtract(x, y):\n",
+        "    return x - y\n",
+        "\n",
+        "# This function multiplies two numbers\n",
+        "def multiply(x, y):\n",
+        "    return x * y\n",
+        "\n",
+        "# This function divides two numbers\n",
+        "def divide(x, y):\n",
+        "    return x / y\n"
+      ],
+      "metadata": {
+        "id": "Dod3_zgYdsWe"
+      },
+      "execution_count": 16,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# DIY: define a function names switch(x, y), where the input x, y changes its position in the output."
+      ],
+      "metadata": {
+        "id": "W9CuAaqXgwb5"
+      },
+      "execution_count": 17,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "add(1129, 48)\n",
+        "divide(15,9814)\n",
+        "multiply(44,4185)"
+      ],
+      "metadata": {
+        "id": "xPKfymFvMycS",
+        "outputId": "fd662b0e-cf4e-49ff-b3da-9870f1e9f5c4",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "execution_count": 21,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "184140"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 21
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Test\n",
+        "\n",
+        "add(2,3)\n",
+        "subtract(3,2)\n",
+        "multiply(2,3)\n",
+        "divide(3,2)"
+      ],
+      "metadata": {
+        "id": "IoHh-U2GBsqH",
+        "outputId": "1d4060dd-79b2-4c52-ab86-eda7a5b51837",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "execution_count": 24,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "1.5"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 24
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "## Using dropbox format"
+      ],
+      "metadata": {
+        "id": "eOluPoNqCCE1"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "!pip install gTTS"
+      ],
+      "metadata": {
+        "id": "huggIqQnNwAx",
+        "outputId": "d2feac65-a2e0-4f02-b798-159ec485a68e",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "execution_count": 26,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Looking in indexes: https://pypi.org/simple, https://us-python.pkg.dev/colab-wheels/public/simple/\n",
+            "Collecting gTTS\n",
+            "  Downloading gTTS-2.3.1-py3-none-any.whl (28 kB)\n",
+            "Requirement already satisfied: click<8.2,>=7.1 in /usr/local/lib/python3.9/dist-packages (from gTTS) (8.1.3)\n",
+            "Requirement already satisfied: requests<3,>=2.27 in /usr/local/lib/python3.9/dist-packages (from gTTS) (2.27.1)\n",
+            "Requirement already satisfied: charset-normalizer~=2.0.0 in /usr/local/lib/python3.9/dist-packages (from requests<3,>=2.27->gTTS) (2.0.12)\n",
+            "Requirement already satisfied: urllib3<1.27,>=1.21.1 in /usr/local/lib/python3.9/dist-packages (from requests<3,>=2.27->gTTS) (1.26.15)\n",
+            "Requirement already satisfied: idna<4,>=2.5 in /usr/local/lib/python3.9/dist-packages (from requests<3,>=2.27->gTTS) (3.4)\n",
+            "Requirement already satisfied: certifi>=2017.4.17 in /usr/local/lib/python3.9/dist-packages (from requests<3,>=2.27->gTTS) (2022.12.7)\n",
+            "Installing collected packages: gTTS\n",
+            "Successfully installed gTTS-2.3.1\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "from gtts import gTTS\n",
+        "from IPython.display import Audio"
+      ],
+      "metadata": {
+        "id": "rAFvMFWNOCUB"
+      },
+      "execution_count": 28,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def tts(text):\n",
+        "  gtts_object = gTTS(text,lang = \"en\", slow = True) \n",
+        "  gtts_object.save(\"myaudio.mp3\")\n",
+        "  return Audio(\"myaudio.mp3\")"
+      ],
+      "metadata": {
+        "id": "LG-dnWk-OHvh"
+      },
+      "execution_count": 29,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "func = \"multiply\" #@param = [\"add\",\"subtract\",\"multiply\",\"divide\"]\n",
+        "digits = input(\"Type two numbers: (e.g., 3,4)\")\n",
+        "digitsplit = digits.split(',')\n",
+        "d1 = int(digitsplit[0])\n",
+        "d2 = int(digitsplit[1])\n",
+        "\n",
+        "if func == \"add\":\n",
+        "  result = add(d1,d2)\n",
+        "  text = \"The addition of %d and %d equals %d.\"%(d1,d2,result)\n",
+        "elif func == \"subtract\":\n",
+        "  result = subtract(d1,d2)\n",
+        "  text = \"If you subtract %d from %d, you get %d.\"%(d2,d1,result)\n",
+        "elif func == \"divide\":\n",
+        "  result = divide(d1,d2)\n",
+        "  text = \"When you divide %d by %d, you get %d.\"%(d1,d2,result)\n",
+        "elif func == \"multiply\":\n",
+        "  result = multiply(d1,d2)\n",
+        "  text = \"%d multiplied by %d is %d.\"%(d1,d2,result)\n",
+        "\n",
+        "print(text)\n",
+        "tts(text)\n",
+        "Audio(\"myaudio.mp3\")"
+      ],
+      "metadata": {
+        "cellView": "form",
+        "id": "FT47bY6qBo3k",
+        "outputId": "b2e39123-8b17-480b-fa20-53ca167eb79f",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 111
+        }
+      },
+      "execution_count": 31,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Type two numbers: (e.g., 3,4)24,7\n",
+            "24 multiplied by 7 is 168.\n"
+          ]
+        },
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "<IPython.lib.display.Audio object>"
+            ],
+            "text/html": [
+              "\n",
+              "                <audio  controls=\"controls\" >\n",
+              "                    <source src=\"data:audio/mpeg;base64,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//NExDshGd6UAZrIADPpIS0SF7U17Gtdi9epv3cr0WdSrvWGt/ZmKlreXI3Qw/a/HWu85l//v/t4fzPWX///3+fzXf/f/rDeG/7U84GAq3R8qHr/4jNVxtZtwKBSqGlD//NExAkSIRKsAdiIAIOS1p/h0AdFxYdWyDrI/SAROCFy2dHSy6nvg3uIOIUniGAHkcDh+g2y+fHIKtZmpq31Nq7a2SdMvgtk/ppoPKWk/I0DrthdAeGrB/DxG9x1Guax//NExBMRwSKwAH5ecBWBNaTzK5VR52IFX/a0z11HtQhRELFlESxwljK+uYV/8/+v1i1Pm0DUrVFtDiuJNT/0fama177EW8ttEIk01O2Aarhk0calVfsRuCRxeTUKtkt1//NExB8RuRqsAMYecSRYKTVZllO6KYfNt0INrLEuBwRcMSvf7gwI+oMCnhNb+u4kOM+hrhK/zih4+K/dScEh342+wb+MWB0Yd2zjHlkRfDON3s/hVn8KWZkpqdkpH08v//NExCsSMR6oAMYYcBKs+UxQbOHBfj1Y2tbfPF3vLD6tW3T4eGFlpeyvrpLnoheUfp+JtDd4zHgQwnns+6LNe9rNN1urc/m6LH9Wv6r/J+/HysUs2sAxMhGhVmtHpwQo//NExDURuSakAMZScHbgRXGC0NXdn7Cn1/+27///07n9GaSz0VgBN42SIHa4BagDpxJpLJ6xgSSC5dZdf//G3tr/f/u+cnD0AUgUkdLbFM6UhdggbP/97r//pe1bVF1f//NExEERwR6cAM0McP/6SEBMF/9hARSWWFCXN4BpKK+M68X////9tczWX/ILFZf///e5F7+v/R3Z69uiTnnRtlfTfS6nQhKqcmpw4u55zMQiiznOdwhJFea///////r///NExE0RExqsAHhEvf//1///+t0rorN6dqbW98+ZZ2Zux6WeeuyKyGshpQWGiIwkFHMLDqj5ImNR80vKC0RwfkwoNQXigBgP5xw/////////X///B////7+/7275pzoh//NExFsROxawAAhOub3zUZ3ZnvY5D0MnHnnqYbcVj5EuIhAmJyouJoPisRx4qJI6FhwViQKxaUKmnCOQGw3pEH////////+f//4eX///0Rnuhl/62a1lmm2SVnsefqsy//NExGkSAxqsAAhOvKrnMhhIVdVfc5UYq6ljx6MBuVFk0aEg8C9BvEIFOFwgpIyQMiEnJiYFP////1///5///+9f//9eurXQ5Or6a1q7GaI71nTFbvWTnvNka1dDjDTj//NExHQSgxqsAAhUvQVx6UHk0wekw0EgZhSCkYi2BaSiGHo/HhIXH48FQiFVA////3///P5/y//tWn//+3+j1Rb6pWbbZbNU5zWONa95h6qVVU1NUxTtWGjC4fHSxEag//NExH0SWxqsAAhUvfRYWCQsKzDhFF5g6C8cHAeILwBx4dceFN////n///////1f////r52n3+lFoj5qJuZ2RlNtNSrzjlNLmKiMVKETR4XDYSzixRjRMhQSQhAMNFwk//NExIYSexasAAhOuYVIHCUPQqM1LkBiwAp2kUX3c/5f//vf6//8a///+/393POn3Z0zFpSxXaj7qytKs7lq+jjUQDIHShh2Eh4dMg0wcHC5SCRT5mKJCRwFGhwSq0VN//NExI8Q2x6wABBOvEb6ghzGYTKpIOvE5psOdIMhxmkolfK5MkP4V826+Rk9Mw2e2r6V8eJCZT2AmAlBupE4b6a031vut7smTDyTNNH6///+ttziDp+l9/6/b6FpU/WE//NExJ4R+xq0ABBKvaCpZcioGnx5/bAhrV+/NaAkdT/BZfKpY1ow8gMYK7uS0LCzABlIZ5vCwZXFnOtDURh/s20lmjD37rNZR5WGCAcXYUl0WtSTxp8Jh/6BmMhMSb5p//NExKkXAcqsAMPalKkXqoVBAQAIAwrFBcnN5JyNe6ut3blCq/hkcljarEZdGnesw169Wst9YronF/OpV3HMBFoOkP4dKJDy/N4AcsSHTY1YZQEpr0eGMy/r99+1nb/O//NExKAe+gKgAM6SmSMikP92FiE2H6dbuCrYk7+9XsSemLVxfdrbraPPGgxH88FCcKl4qrUwyMGh2mpjnCq7llLrMCfCvldBkiaMMCDu6sCAEzZg5ir3ldkC6+7z7Hmv//NExHcVuT64AIYecNuk1gCt+baSQIKH6koSh2PO2tjpm87VbZ/9q6051a0ePDgKijiorR7N5hTdrsw5Ccefjk6JpEUW8azoktr25WYlAyZA3BnqveNyCoiE7s/WrNDx//NExHMUATK4AJZYcMdbdFOjP+zDMkSmb99I8I71QeAUW5sZbjwRl7OikPq/NYz1M85U1NOISoysFX1iunH1rc/44FIAQrHNbsmEZ4S1H9ryZuAVQ27X2sX0feQ0FNVm//NExHYVGbqsAM6OlKU3sYb1KbyijzUw5DdQr/V6Pv9ZxGjW/1Be1xWzC9evkt357EsVHHvWirGKRttZRMKWCtq3F4wI8A0AztYQ7StXA3iwl+VczadLYnnLvo2M1GAL//NExHQTGSKgAMYecA0sc4NRMc3Czt8cfzPc0Uw2iwd//6wE3/Z3f//+ioB1VrCkg4ohr8QdNCZRRYGhCQaAyHsOMx3ZPJlc5wjc5HF1EPGDgnHFBUVlSh9ZlpBaBXmA//NExHoRIQ58AMvQcP9As7CU0JW6HP3ev7BZ5X3bMVXVldh6BgE5wIXHkJAXTOAZaq4jKgNoBSuGmsNMhirTvA0y9dlS7H7l/zcvrr4+mkICwHk8Q3jB5yFf9NX3vRjp//NExIgSCM50ANDGcJpW2exSaUvl7UnegFicfbBC8eKF1iiFe24VfehKko/+W3xWLJJuEBmfnaCHBsDAsYCh41ite0AGBWnbHHaKw8Iwm8KuaZYAFITzm5I5KvqtPLoQ//NExJIZwT6IAM5YcP9L5HIIlKnpkTg3obb9vVdV1MJDDoJjDMTaj3sryfEvrEmLUWPEpRQjE+qXPfDP6/2v//efJVHL9MdB+94w5Q0n0DP///ZFBpvLfIPIke4DqUAT//NExH4dAbKYANYSlI/wMpYC3rxBEHlU/xankZvQp9trVMWkBU6pAg78r7dWFiZqq46ZPAaL9R1ahV6rM9PmJStMgvbxmZ/23//t8/8/crT2b/T/////rcql1MiFtXuX//NExF0VgaasAMvMlIjLoqIRgnWEa8ANZ5G4kMsXCA34bymJFTr3XqHuTZ0oGpNzUNnLKHuDrd60qPFiySpIGgTQ3/ik+72/t////9CphKzGLSbpF9jJk+0sQ7rDOMcn//NExFoRuPqoAMvWcElLxRIJ+2Nfu1tG9Mc35pz2i+Sx0yHIEsbIrKNToXNejr6tbLRJi3s/0PSLCclwH/////6qlEGrYEHJWOqXsE4jjJKgSWYsGFghY0WWI+IPNMXR//NExGYR4T6gAMvacDdqqVl9Fb8PEMsq/0rw6O2wKj6tps7irFY0xCMZ7m3UaubDatHaZA/zDTy8RoAr4EXDXH1AF6A6wRaglJbxbp4pRlNMtgvnKNI7rly3CXo8Hv2n//NExHERATqMANPScZ2BsOzW2qvviPeYzElULnq43mzDv4e2cCxchWeU3/7v/9V34caeTVJEdwyYGMHAkoYBuUYSyLiOVXhGU3UoQY8drHyY/w+16sFLMU8ts9CyxoGP//NExIATuT58ANPYcObK9rW+j6JWoiqLnG/b9jjFuEXf/DC1BKdhiccBgBTtCYZMjAYDYyYSKnJtokhNQQ4QfOcCxGram3As5vpDmWL7z/50fdUE592Md3gyyUUMbADB//NExIQRuTaAANvMcNmw6DjCu4klnaaffsp9xb5esSFj6BMVW9jOGVvfffprMzQ6ctBYmTD58er////9UTqqitM+po+p8yNngNXb6yQ2gv5XfBGRgnxMUHP412oXtROi//NExJAbkbKEAN4WlMNvtz/M/etem+YO0bIBsXGYbEyUyY06qqn0zju3TWdvTWpqwwj2cJDwgVHEahMdb////8vDlZqpEzAjFm8LYMgcSRCIc7nlwTzYi83yUQ699vcP//NExHQVmUaUAM4WcFUMTNYu/nHzWnzTPhTXugRi5oOjHsaQkmT9POybZlZrvR+BX6vvPX93+L2///8Y7GFoGAgLduWsOETlYClAISBl781YIdbeVxa2XdyH+TQVnGD///NExHAS+UqcAMvQlJqMnna7GBYUHh7NOSd3NXxft/xr44oeg//3xVf/9LlN///mBZ49FVFg99J8AhKKq4KHTJSTfUpU+7Sw1aIUFXJhqYLO3f8RHHVO9Vvyx0Ru6Zz///NExHcSmT6cAVlAAM3f9THfs/n5//u3v4/upvn54tSK85FPTf3d139uqZhCGn2Q50FChoftJ5yWoGT3VMU9ClrUolu9RVjieHxIhSWbwNsB68nnS8lj4esfzoGw9gkA//NExH8gKyqYAZlYAGD6CVgBFSlHGYv/////////////T/7399vbdOmxm5zGUOMc9DWnKmUNNnGMpxIxjiZdnICEbnFxoXG4kDg3EYHhAQmCSg0PNECF0EcSjgUOL/////NExFETQxqoAcU4Af///37v7pV7aa0V6n1oy0IMYxrGx9D3MdRuhxA6rudG5xUTjxU8aExuaXPEkbkh0iKR6LQeh4rIjRwkGw6PCcauHwf+QP////n///+DV8i/X21I//NExFcRexawAAgOudOJmZjkKpyKdyUKNdCiZhYUeQ5UqHhITIDEezs6GMf1KUpS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//NExKURMS6sAMTWcNbWWPN8//LTsq1k+7knIkRCQeUiRDdR0cwESaC8CXqdOWra8WOkEilanQ+xsxKOX/0fXRLD8ZiXtyAjF/nDcqHbywe59Y9EfEzJw8B+GIO0LoGX//NExLMSAa6UAMIOlNgtBqBeDoOcFKHIJqA0iWb4nA7x5mboCXDhKRMM0f6DJsm7mpgmbMin/1IMyazdjc09kTM7/+gXDiBmeM3WkgXpssvGI+jMNrGZcMPvtv55Z5ZT//NExL4SqOZUAVgoAD5ueL5cMDCvL5w4ej8PU2KZ4+SZxQsyP+jlKVva1vK2kylbShmUgEBPqio//ftb//X/9f69/av/sc/OlCHOt3/6Krku9SOdkZCKQQyDiAgghlOw//NExMYh4yaIAYtoAIDihCMOoeoEv/I//////mIGRZf/uv////X6tZ/uujX2PpqpirzHopyPos/890JmlUIHnq4nB+D4qQPJitJgEACCoki8fGRocLQ2YcDwRyZlFN////NExJERGxawAcUQAf////8vl/////////57+f///f+IqqPnbrnju6IhrS7eKqk6t60uZtxq0UtB4gTMIJYsLh8UaEo80IgXDUD8IhEEQ4JwSBsIwcMSaNUC//////////NExJ8SKyKsABBOvMP7///+//6///b7e/j4i+q/vv27Yh8TURbqmEduw2t1N95yXsmD6p5FRrraWoopZ8wNySaSSUh6MScPqxWUDwP5NJg1IZckB0yOjcRx2xZFAuSX//NExKkToxqsABBQvf////////r///////X//x//r81H//xXx//K1NN+x1rDNCoPVCjrJa6a5pp1KtB4cmxko4KRQPhppToDYsRQ6HismlCwsdgqCIGawG4giYBkLHRu//NExK0Vow6kAChWuZ2KAeZdW8TkEJCzmISfN3gOGCiUS5sIRGl6WnxCm2cqEAYCr3PkFHhStqgGWHnbqGgUEAiQBZyx4vUMKMgmWJXkk27XFg/l+Xsn/+fY58OLknOe//NExKkSaxKEADhQuRBGB//A5QAQBEARqO31J2OgR+P3vxjz/wwRnj4H9SCP3gwZ5hD8wwznT9f7tGOkMuIDWeMMDOSg3HpIwjHB+P3s2vMP0b+//9Xw4HRGbdbEMZhl//NExLIRWBZwAGDGACgZgkdW08dnBcGh6ja8q4Kh1JYNAY0I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l//+yyzIzVlYGCcIA4aBkVFhYPGlCzf8VFRUWaaWKCze3/6hYW6hYW4tmQkLC4qZ//NExP8ZorXcAGDGuQELCrDIwXFUmUxBTUUzLjEwMFVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVTEFNRTMu//NExOsXAqnsAGDGuTEwMFVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVTEFNRTMu//NExOIRQLEgAEhGTDEwMFVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVTEFNRTMu//NExKwAAANIAAAAADEwMFVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVTEFNRTMu//NExKwAAANIAAAAADEwMFVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVTEFNRTMu//NExKwAAANIAAAAADEwMFVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVTEFNRTMu//NExKwAAANIAAAAADEwMFVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVTEFNRTMu//NExKwAAANIAAAAADEwMFVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVTEFNRTMu//NExKwAAANIAAAAADEwMFVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVTEFNRTMu//NExKwAAANIAAAAADEwMFVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVTEFNRTMu//NExKwAAANIAAAAADEwMFVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVTEFNRTMu//NExKwAAANIAAAAADEwMFVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVTEFNRTMu//NExKwAAANIAAAAADEwMFVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVTEFNRTMu//NExKwAAANIAAAAADEwMFVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVTEFNRTMu//NExKwAAANIAAAAADEwMFVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV//NExKwAAANIAAAAAFVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV//NExKwAAANIAAAAAFVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV\" type=\"audio/mpeg\" />\n",
+              "                    Your browser does not support the audio element.\n",
+              "                </audio>\n",
+              "              "
+            ]
+          },
+          "metadata": {},
+          "execution_count": 31
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "More operators: <br>\n",
+        "* Comparison Operators: ==, !=, <, >, <=, >= <br>\n",
+        "* Assignment Operators: =, +=, -=, *=, /=, %= <br>\n",
+        "* Logical Operators: and, or, not <br>\n",
+        "* Identity Operators: is, is not <br>\n",
+        "* Membership Operators: in, not in "
+      ],
+      "metadata": {
+        "id": "sfubu24UbqjH"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "# 📗Topic [3] Data types: number, string, list and dictionary\n"
+      ],
+      "metadata": {
+        "id": "3eSrUoglRh6-"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "\n",
+        "|Data type| |\n",
+        "|:--:|:--:|\n",
+        "|number|int, float|\n",
+        "|string|charcter|\n",
+        "|list|[1, 2,4], ['Mary','Tom','Jane'|\n",
+        "|dictionary|(key: value), [('English': 80), ('Korean':90)]|\n",
+        "|tuple|('zero', 0)|\n"
+      ],
+      "metadata": {
+        "id": "ZVFb5JmJrPXu"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "a1 = 3   # a1 is integer\n",
+        "a2 = 3.0 # a2 is float\n",
+        "a3 = \"3\" # a3 is string\n",
+        "\n",
+        "type(a1); type(a2); type(a3)\n",
+        "# print(type(a1), type(a2), type(a3))"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "g-kvldqENA1e",
+        "outputId": "7ac463bc-4877-4e58-ed5d-d31a0c38b8c3"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "<class 'int'> <class 'float'> <class 'str'>\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "list and index (0, 1, 2,...)"
+      ],
+      "metadata": {
+        "id": "HC_wMsPnNbzs"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "a = [1, \"Mary\", 4, \"John\"]  # This is a list.\n",
+        "print(type(a))\n",
+        "\n",
+        "# a+a"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "LyTw7phONZHE",
+        "outputId": "43627022-ef0d-4728-bf44-93cde20e719a"
+      },
+      "execution_count": 32,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "<class 'list'>\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "* index: Python index starts from '0'\n",
+        "\n",
+        "e.g., a = [1, 2, 3, 4]"
+      ],
+      "metadata": {
+        "id": "-fL-pJvj7NW8"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "a[0]\n",
+        "type(a[0])\n",
+        "type(a[1])\n",
+        "a[0] + a[2]\n",
+        "# a[0] + a[1] # int + str = error\n",
+        "#파이썬은 0부터 시작함\n"
+      ],
+      "metadata": {
+        "id": "9Z5zLDGc7X13",
+        "outputId": "fbb154b1-cdec-4999-f901-d870d1b2db01",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "execution_count": 40,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "5"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 40
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "[Github accounts](https://raw.githubusercontent.com/MK316/Spring2023/main/DL/files/DL_github.csv)"
+      ],
+      "metadata": {
+        "id": "S-KG49Zaim0S"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "\n",
+        "\n",
+        "---\n",
+        "# The End\n"
+      ],
+      "metadata": {
+        "id": "3cZjH9xIiN4_"
+      }
+    }
+  ]
+}
